@@ -37,7 +37,7 @@
     FROM crawler_article
     WHERE title LIKE CONCAT('%',#{keyWord},'%')
   </select>
-  <select id="getList" resultType="crawlerArticle">
+  <select id="getList" resultMap="ResultMapWithBLOBs">
     select
     <include refid="Base_Column_List" />
     ,
