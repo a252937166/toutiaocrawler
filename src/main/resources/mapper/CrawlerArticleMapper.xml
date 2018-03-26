@@ -31,6 +31,21 @@
     from crawler_article
     where 1=1 AND id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="getCount" resultType="_int" parameterType="java.lang.String">
+    SELECT
+      count(id)
+    FROM crawler_article
+    WHERE title LIKE CONCAT('%',#{keyWord},'%')
+  </select>
+  <select id="getList" resultType="crawlerArticle">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from crawler_article
+    where 1=1 AND title LIKE CONCAT('%',#{keyWord},'%')
+    LIMIT ${start},${pageSize}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--          -->
     delete from crawler_article

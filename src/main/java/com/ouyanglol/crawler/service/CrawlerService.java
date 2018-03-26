@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -93,4 +94,12 @@ public class CrawlerService {
     }
 
 
+    public Integer getCount(String keyWord) {
+        return crawlerArticleMapper.getCount(keyWord);
+    }
+
+    public List<CrawlerArticle> getArticleList(int pageNo, int pageSize, String keyWord) {
+        Integer start = (pageNo-1)*pageSize;
+        return crawlerArticleMapper.getList(start,pageSize,keyWord);
+    }
 }

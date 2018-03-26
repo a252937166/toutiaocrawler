@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
@@ -76,7 +77,7 @@ public class CrawlerController {
 
     @ApiOperation("开始爬虫任务")
     @PostMapping("/toutiao/start")
-    private HttpResult start() {
+    private HttpResult<Boolean> start() {
         HttpResult<Boolean> httpResult = new HttpResult<>();
         //判断当前是否已经是爬取状态
         if (!start) {
@@ -130,9 +131,14 @@ public class CrawlerController {
 
     @ApiOperation("爬虫文章列表")
     @GetMapping("/toutiao/articleList")
-    private HttpResult getArticleList(@RequestParam @ApiParam(required = true) int pageSize, @RequestParam @ApiParam(required = true) int pageNo, @RequestParam(defaultValue = "") @ApiParam() String keyWord) {
-        HttpResult httpResult = new HttpResult<>();
-
+    private HttpResult<Object> getArticleList(@RequestParam @ApiParam(required = true) int pageSize, @RequestParam @ApiParam(required = true) int pageNo, @RequestParam(defaultValue = "") @ApiParam() String keyWord) {
+        HttpResult<Object> httpResult = new HttpResult<>();
+        Integer count = crawlerService.getCount(keyWord);
+        List<CrawlerArticle> articleList = crawlerService.getArticleList(pageNo,pageSize,keyWord);
+        Map<String,Object> map = new HashMap<>();
+        map.put("count",count);
+        map.put("list",articleList);
+        httpResult.setResult(map);
         return httpResult;
     }
 
