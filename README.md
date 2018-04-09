@@ -38,12 +38,13 @@ h5：http://m.toutiao.com/profile/50502347096/#mid=50502347096（切换的<font 
 由`Network`的信息可以得到两个文章接口：
 cp：
 https://www.toutiao.com/c/user/article/?page_type=1&user_id=50502347096&max_behot_time=0&count=20&as=A1B57ACB48A9D4F&cp=5AB8F92DD4CFBE1&_signature=NVHtvxAab.D7OmttJlHb-zVR7a
+
 h5：
 https://www.toutiao.com/pgc/ma/?page_type=1&max_behot_time=&uid=50502347096&media_id=50502347096&output=json&is_json=1&count=20&from=user_profile_app&version=2&as=A125DA2BD89A381&cp=5AB81AE3C8116E1&callback=jsonp3
 
 ### 接口对比
 
-很明显，cp端的接口不h5的接口多一个`_signature`参数，我私下尝试过破解`_signature`的生成方法，结果发现异常复杂，我的前端水平根本搞不定，方法是`window.TAC.sign`，有兴趣的同学可以去试试。
+很明显，cp端的接口比h5的接口多一个`_signature`参数，我私下尝试过破解`_signature`的生成方法，结果发现异常复杂，我的前端水平根本搞不定，方法是`window.TAC.sign`，有兴趣的同学可以去试试。
 
 ![这里写图片描述](https://img-blog.csdn.net/20180326160115790?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
