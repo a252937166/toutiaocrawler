@@ -29,7 +29,7 @@ cp：https://www.toutiao.com/c/user/50502347096/#mid=50502347096
 
 图(1)
 
-h5：http://m.toutiao.com/profile/50502347096/#mid=50502347096（切换的<font color='red'>文章</font>的TAB）
+h5：http://m.toutiao.com/profile/50502347096/#mid=50502347096 （切换到<font color='red'>文章</font>的TAB）
 
 ![这里写图片描述](https://img-blog.csdn.net/20180326154605302?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
