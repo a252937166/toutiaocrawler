@@ -191,7 +191,10 @@ public class Http {
 	}
 	
 	private void addHeader(){
-		headers.put("user-agent","Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+		headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36");
+		headers.put("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+		headers.put("Accept-Language","zh-CN,zh;q=0.9,en;q=0.8");
+		headers.put("Host","www.toutiao.com");
 		for (Entry<String, String> header : headers.entrySet())
 			requestBase.addHeader(header.getKey(), header.getValue());
 	}
