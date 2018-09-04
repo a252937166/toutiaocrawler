@@ -1,16 +1,10 @@
-CREATE TABLE crawler_article
-(
-  id           INT AUTO_INCREMENT
-    PRIMARY KEY,
-  title        VARCHAR(100) NULL,
-  content      TEXT         NULL,
-  create_date  DATETIME     NULL,
-  source_url   VARCHAR(200) NULL
-  COMMENT '原文地址',
-  publish_date DATETIME     NULL
-  COMMENT '发布时间',
-  author       VARCHAR(50)  NULL
-  COMMENT '作者'
-)
-  COMMENT '爬取文章'
-  ENGINE = InnoDB;
+CREATE TABLE `crawler_article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `content` text,
+  `create_date` datetime DEFAULT NULL,
+  `source_url` varchar(200) DEFAULT NULL COMMENT '原文地址',
+  `publish_date` datetime DEFAULT NULL COMMENT '发布时间',
+  `author` varchar(50) DEFAULT NULL COMMENT '作者',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='爬取文章'
