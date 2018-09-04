@@ -25,13 +25,13 @@ https://github.com/a252937166/toutiaocrawler.git
 以台海网为例，一般大型平台都会有cp和H5两种网页。
 cp：https://www.toutiao.com/c/user/50502347096/#mid=50502347096
 
-![这里写图片描述](https://img-blog.csdn.net/20180326152729252?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%981.png-blog)
 
 图(1)
 
 h5：http://m.toutiao.com/profile/50502347096/#mid=50502347096 （切换到<font color='red'>文章</font>的TAB）
 
-![这里写图片描述](https://img-blog.csdn.net/20180326154605302?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%982.png-blog)
 
 图(2)
 
@@ -46,7 +46,7 @@ https://www.toutiao.com/pgc/ma/?page_type=1&max_behot_time=&uid=50502347096&medi
 
 很明显，cp端的接口比h5的接口多一个`_signature`参数，我私下尝试过破解`_signature`的生成方法，结果发现异常复杂，我的前端水平根本搞不定，方法是`window.TAC.sign`，有兴趣的同学可以去试试。
 
-![这里写图片描述](https://img-blog.csdn.net/20180326160115790?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%983.png-blog)
 
 图(3)
 
@@ -58,7 +58,7 @@ https://www.toutiao.com/pgc/ma/?page_type=1&max_behot_time=&uid=50502347096&medi
 
 第一部当然是找参数怎么生成的，很遗憾，这一步没有捷径，只能复制好`as`和`cp`，去每一个`js`文件里面匹配，需要一点耐心。
 
-![这里写图片描述](https://img-blog.csdn.net/20180326161018555?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%984.png-blog)
 
 图(4)
 
@@ -152,17 +152,16 @@ data.article_url：文章的html地址
 使用`postman`发送请求还是不太方便，还要填地址之类的，我考虑有个前端界面来操作就最好了，但是前端水平有限，不想花太多时间写，所以选择了集成`swagger2`。
 打开http://127.0.0.1:9091/swagger-ui.html#/
 
-![这里写图片描述](https://img-blog.csdn.net/20180326163832731?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%985.png-blog)
 图(5)
 
-![这里写图片描述](https://img-blog.csdn.net/20180326164531276?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%986.png-blog)
 
 图(6)
 
 一看就知道怎么用了，我就不多介绍了，有兴趣的同学，可以根据这五个接口，写一个前端界面，一个针对头条号的爬虫就算完成了。
 
-![这里写图片描述](https://img-blog.csdn.net/20180326170608699?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX09PTw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%987.png-blog)
 
 图(7)
 
