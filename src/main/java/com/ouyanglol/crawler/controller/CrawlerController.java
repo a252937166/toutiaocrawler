@@ -1,10 +1,11 @@
 package com.ouyanglol.crawler.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.ouyanglol.crawler.model.CrawlerArticle;
 import com.ouyanglol.crawler.service.CrawlerService;
-import com.ouyanglol.crawler.util.Http;
+import com.ouyanglol.crawler.util.HttpUtil;
 import com.ouyanglol.crawler.util.ThreadUtil;
 import com.ouyanglol.crawler.util.ToutiaoUtil;
 import com.ouyanglol.crawler.web.HttpResult;
@@ -49,9 +50,7 @@ public class CrawlerController {
                 String as = ascp.get("as");
                 String cp = ascp.get("cp");
                 String url = "https://www.toutiao.com/pgc/ma/?page_type=1&max_behot_time="+maxBehotTime+"&uid="+id+"&media_id="+id+"&output=json&is_json=1&count=20&from=user_profile_app&version=2&as="+as+"&cp="+cp;
-                Http http = new Http(url);
-                Http.HttpResult result = http.doGet();
-                JSONObject ret = result.toJsonObject();
+                JSONObject ret = JSON.parseObject(HttpUtil.getReturn(url));
                 String mediaId = ret.getString("media_id");
                 //判断uid是否有效
                 if (mediaId!=null&&mediaId.equals(uid)) {
