@@ -22,8 +22,8 @@ https://github.com/a252937166/toutiaocrawler.git
 
 ### 破解入口
 
-以台海网为例，一般大型平台都会有cp和H5两种网页。
-cp：https://www.toutiao.com/c/user/50502347096/#mid=50502347096
+以台海网为例，一般大型平台都会有pc和H5两种网页。
+pc：https://www.toutiao.com/c/user/50502347096/#mid=50502347096
 
 ![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%981.png-blog)
 
@@ -36,7 +36,7 @@ h5：http://m.toutiao.com/profile/50502347096/#mid=50502347096 （切换到<font
 图(2)
 
 由`Network`的信息可以得到两个文章接口：
-cp：
+pc：
 https://www.toutiao.com/c/user/article/?page_type=1&user_id=50502347096&max_behot_time=0&count=20&as=A1B57ACB48A9D4F&cp=5AB8F92DD4CFBE1&_signature=NVHtvxAab.D7OmttJlHb-zVR7a
 
 h5：
@@ -44,7 +44,7 @@ https://www.toutiao.com/pgc/ma/?page_type=1&max_behot_time=&uid=50502347096&medi
 
 ### 接口对比
 
-很明显，cp端的接口比h5的接口多一个`_signature`参数，我私下尝试过破解`_signature`的生成方法，结果发现异常复杂，我的前端水平根本搞不定，方法是`window.TAC.sign`，有兴趣的同学可以去试试。
+很明显，pc端的接口比h5的接口多一个`_signature`参数，我私下尝试过破解`_signature`的生成方法，结果发现异常复杂，我的前端水平根本搞不定，方法是`window.TAC.sign`，有兴趣的同学可以去试试。
 
 ![这里写图片描述](https://qiniu.ouyanglol.com/blog/java%E7%88%AC%E8%99%AB%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1%E6%96%87%E7%AB%A0%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%983.png-blog)
 
